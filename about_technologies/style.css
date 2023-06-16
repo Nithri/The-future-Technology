@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.showcase{
+
+position: absolute;
+right: 0;
+width:100%;
+min-height: 100vh;
+padding: 100px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: black;
+color: black;
+z-index: -1;
+}
+
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40 px 100px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active{
+    background: url('close.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: none;
+    font-size: 18px;
+    color: black;
+    margin-left: 30px;
+    font-weight: 300px;
+    z-index: 0;
+}
+
+.showcase video {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0.8;
+z-index: -1;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: lightgray;
+mix-blend-mode: overlay;
+}
+
+.glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#33ccff,#ff0066);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    z-index: 5;
+}
+
+.circle .text {
+    position: absolute; 
+    color: white;
+    z-index: 6;
+    transition: transform 1.5s;
+    background-color: black;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%; 
+    font-size: 4px;
+
+}
+
+.circle .text h3 {
+   position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-weight: 500%;
+    font-size: 8px;
+}
+.circle .text p {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+}
+
+.circle .text:hover {
+  transform: scale(2.5);
+  font-size: 5px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.glow span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#33ccff,#ff0066);
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.glow span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.glow span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow span:nth-child(4) {
+    filter: blur(60px);
+}
+
+
+
+@media (min-aspect-ratio: 16/9){
+    .stars_video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .stars_video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* Second Circle */
+
+.glow2 {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    background: linear-gradient(90deg, rgba(199,7,138,1) 0%, rgba(229,0,255,1) 0%, rgba(106,255,0,1) 100%);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    z-index: 5;
+    right: 10%;
+    top: 10%;
+}
+
+.circle2 .text {
+    position: absolute; 
+    color: white;
+    z-index: 6;
+    transition: transform 1.5s;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    right: 9.5%;
+    top: 10%;
+    font-size: 4px;
+}
+
+.circle2 .text h3 {
+   position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+    font-weight: 500%;
+    font-size: 8px;
+}
+
+.circle2 .text p {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    right: 9.5%;
+    top: 10%;
+    padding-left: 30px;
+    padding-top: 12px;
+}
+
+.circle2 .text:hover {
+    transform: scale(2);
+    font-size: 5px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle2 .glow2 span {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(90deg, rgba(199,7,138,1) 0%, rgba(229,0,255,1) 0%, rgba(106,255,0,1) 100%);
+    border-radius: 50%;
+    z-index: 5;
+    right: 5%;
+    top: 5%;
+}
+
+.glow2 span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow2 span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.glow2 span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow2 span:nth-child(4) {
+    filter: blur(60px);
+}
+
+
+/* Third Circle */
+
+.glow3 {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    background: linear-gradient(90deg, rgba(199,7,138,1) 0%, rgba(0,146,255,1) 0%, rgba(255,243,51,1) 100%);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    z-index: 5;
+    right: 7%;
+    bottom: 10%;
+}
+
+.circle3 .text {
+    position: absolute; 
+    color: white;
+    z-index: 6;
+    transition: transform 1.5s;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    right: 6.5%;
+    font-size: 4px;
+    bottom: 10%;
+
+}
+
+.circle3 .text h3 {
+   position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+    font-weight: 500%;
+    font-size: 8px;
+}
+
+.circle3 .text p {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    right: 7%;
+    bottom: 10%;
+    padding-left: 30px;
+    padding-top: 45px;
+}
+
+.circle3 .text:hover {
+    transform: scale(2);
+    font-size: 5px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle3 .glow3 span {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(90deg, rgba(199,7,138,1) 0%, rgba(0,146,255,1) 0%, rgba(255,243,51,1) 100%);
+    border-radius: 50%;
+    z-index: 5;
+    right: 7%;
+    bottom: 7%;
+
+}
+
+.glow3 span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow3 span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.glow3 span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow3 span:nth-child(4) {
+    filter: blur(60px);
+}
+
+/* Fourth Circle */
+
+.glow4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(#33ccff,#ff0066);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    z-index: 5;
+    left: 51%;
+    top: 33%;
+}
+
+.circle4 .text {
+    position: absolute; 
+    color: white;
+    z-index: 6;
+    transition: transform 1.5s;
+    background-color: black;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%; 
+    font-size: 4px;
+    left: 51%;
+    top: 33%;
+}
+
+.circle4 .text h3 {
+   position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+    font-weight: 500%;
+    font-size: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.circle4 .text p {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 0px;
+}
+
+.circle4 .text:hover {
+  transform: scale(2.5);
+  font-size: 4.6px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.glow4 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#33ccff,#ff0066);
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.glow4 span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow4 span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.glow4 span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow4 span:nth-child(4) {
+    filter: blur(60px);
+}
+
+/* Fifth Circle*/
+
+.glow5 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    z-index: 5;
+    left: 19%;
+    top: 14%;
+}
+
+.circle5 .text {
+    position: absolute; 
+    color: white;
+    z-index: 6;
+    transition: transform 1.5s;
+    background-color: black;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%; 
+    font-size: 4px;
+    left: 19%;
+    top: 14%;
+}
+
+.circle5 .text h3 {
+   position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+    font-weight: 500%;
+    font-size: 7.5px;
+}
+.circle5 .text p {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: 7px;
+    padding: 17px;
+}
+
+.circle5 .text:hover {
+  transform: scale(2.5);
+  font-size: 4.5px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.glow5 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.glow5 span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow5 span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.glow5 span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow5 span:nth-child(4) {
+    filter: blur(60px);
+}
+
+/* Sixth Circle*/
+
+.glow6 {
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    background: linear-gradient(90deg, rgba(199,7,138,1) 0%, rgba(229,0,255,1) 0%, rgba(106,255,0,1) 100%);
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+    z-index: 5;
+    left: 32%;
+    bottom: 9%;
+}
+
+.circle6 .text {
+    position: absolute; 
+    color: white;
+    z-index: 6;
+    transition: transform 1.5s;
+    background-color: black;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%; 
+    font-size: 4px;
+    left: 32%;
+    bottom: 9%;
+}
+
+.circle6 .text h3 {
+   position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+    font-weight: 500%;
+    font-size: 8px;
+}
+.circle6 .text p {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: 7px;
+    padding: 17px;
+}
+
+.circle6 .text:hover {
+  transform: scale(2.5);
+  font-size: 5px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.glow6 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(199,7,138,1) 0%, rgba(229,0,255,1) 0%, rgba(106,255,0,1) 100%);
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.glow6 span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glow6 span:nth-child(2) {
+    filter: blur(15px);
+}
+
+.glow6 span:nth-child(3) {
+    filter: blur(25px);
+}
+
+.glow6 span:nth-child(4) {
+    filter: blur(60px);
+}
